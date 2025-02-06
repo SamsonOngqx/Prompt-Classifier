@@ -1,7 +1,7 @@
-🚀 # Prompt-Classifier
+# Prompt-Classifier
 Prompt  Classifier is a Python package for chatbot developers to detect prompt injection attacks using ML models. It supports TF-IDF vectorization, classification algorithms, and logs potential attacks in a json file. Built with scikit-learn, XGBoost, and joblib, it helps secure chatbot interactions.
 
-📥 ## Installation
+## Installation
 
 To install **Prompt Classifier**, navigate to the project's root folder titled project_root directory in your terminal and run:
 
@@ -9,7 +9,7 @@ To install **Prompt Classifier**, navigate to the project's root folder titled p
 pip install . 
 ```
 
-⚙️ ## Setup (First-Time Users)  
+## Setup (First-Time Users)  
 
 When you run the `classify_input` function for the first time, you will be prompted to enter a **directory path** where the log file should be saved.  
 
@@ -21,7 +21,7 @@ If you need to change the log file location, **delete `prompt_classifier_config.
 
 ---
 
-🛠️ ## Usage  
+## Usage  
 
 To classify a user input, import the package and use the `classify_input` function in your script:  
 
