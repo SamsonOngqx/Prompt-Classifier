@@ -16,5 +16,5 @@ setup(
     ],
     description='A Python package for chatbot developers to classify prompt injection attempts.',
     author='Samson Ong',
-    author_email='samsonong124@gmail.com',
+    author_email='---------------',
 )
