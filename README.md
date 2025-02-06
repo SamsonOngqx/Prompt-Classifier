@@ -38,3 +38,32 @@ result = classify_input(user_input)
 # Output the result
 print(result)
 ```
+
+# Expected Output of `classify_input` Function  
+
+The `classify_input` function analyzes a user input and determines whether it is **benign** or a **prompt injection attack**. It returns a dictionary containing the classification result.
+
+### **Output Format**  
+
+```python
+{
+    "is_prompt_injection": "<Classification>",
+    "class": "<Input Class>"
+}
+```
+
+For example:
+If the input is a legitimate prompt injection attempt, the output of the function will be:
+```python
+{
+    "is_prompt_injection": "Legitimate Prompt Injection",
+    "class": "jailbreak"
+}
+```
+If the input is benign, the output of the function will be:
+```python
+{
+    "is_prompt_injection": "Benign",
+    "class": "benign"
+}
+```
