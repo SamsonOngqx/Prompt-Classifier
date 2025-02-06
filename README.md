@@ -18,13 +18,13 @@ pip install .
 ```
 Example Directory Structure
 Your project should look like this before running the command:
-
+```arduino
 project_root/
 │── prompt_classifier/
 │── setup.py
 │── MANIFEST.in
 │── docs/
-
+```
 ## Setup (First-Time Users)  
 
 When you run the `classify_input` function for the first time, you will be prompted to enter a **directory path** where the log file should be saved.  
