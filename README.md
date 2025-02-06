@@ -104,3 +104,16 @@ Benign inputs are not logged.
 The `Prompt Classifier` package follows this flow for detecting and logging prompt injection attempts.  
 
 ![Architecture Overview](https://imgur.com/gallery/fyp-XXMe42I)
+
+The `Prompt Classifier` package operates in **two main stages**:  
+
+1. **Binary Classification** - Determines if an input is **Benign (0)** or **Prompt Injection (1)**.  
+2. **Multi-Class Classification** - If a prompt injection is detected, it categorises it into **specific attack types** using a trained model.  
+
+### **Workflow**  
+
+1️⃣ **User Input** → 2️⃣ **Feature Extraction (TF-IDF)** → 3️⃣ **Binary Classification**  
+   - If **Benign**, return `{ "is_prompt_injection": "Benign", "class": "benign" }`  
+   - If **Injection Detected**, proceed to **multi-class classification**.  
+
+4️⃣ **Multi-Class Classification** → 5️⃣ **Logging (If Attack Detected)** → 6️⃣ **Return Classification Result**  
