@@ -98,3 +98,9 @@ The log file, **`prompt_injection_log.json`**, is stored in **JSON format** and 
 
 Only legitimate prompt injection attempts are logged.
 Benign inputs are not logged.
+
+##  Architecture Overview  
+
+The `Prompt Classifier` package follows this flow for detecting and logging prompt injection attempts.  
+
+![Architecture Overview](https://imgur.com/a/QRCjcOE)
