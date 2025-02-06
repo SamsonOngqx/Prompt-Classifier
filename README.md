@@ -110,7 +110,8 @@ The `Prompt Classifier` package operates in **two main stages**:
 1. **Binary Classification** - Determines if an input is **Benign (0)** or **Prompt Injection (1)**.  
 2. **Multi-Class Classification** - If a prompt injection is detected, it categorises it into **specific attack types** using a trained model.  
 
-### **Workflow**  
+
+### **How It Works**
 
 1️⃣ **User Input** → 2️⃣ **Feature Extraction (TF-IDF)** → 3️⃣ **Binary Classification**  
    - If **Benign**, return `{ "is_prompt_injection": "Benign", "class": "benign" }`  
