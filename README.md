@@ -118,3 +118,48 @@ The `Prompt Classifier` package operates in **two main stages**:
    - If **Injection Detected**, proceed to **multi-class classification**.  
 
 4️⃣ **Multi-Class Classification** → 5️⃣ **Logging (If Attack Detected)** → 6️⃣ **Return Classification Result**  
+    - Multi-Class Classification determines which prompt injection attack classes does the attempt falls under
+
+
+##  Prompt Injection Attack Categories  
+
+If an input is classified as a **Legitimate Prompt Injection**, it falls into one of the following categories:  
+
+###  **Active Injection**  
+- Malicious prompts **actively delivered** to an LLM, such as via **emails** or **direct messages**.  
+- These prompts attempt to manipulate the LLM into **leaking sensitive data**, executing **malicious actions**, or generating **harmful outputs**.  
+
+###  **Passive Injection**  
+- Malicious content **embedded in external sources** (e.g., **webpages, databases, APIs**) that the LLM reads unknowingly.  
+- The LLM **processes false/malicious data**, leading to misinformation or **unexpected behaviors**.  
+
+###  **User-Driven Injection**  
+- **Innocent-looking prompts** that, when copied and pasted by a user, trigger **malicious behavior** within the LLM.  
+- Often used in **social engineering attacks** to exploit unsuspecting users.  
+
+###  **Virtual Prompt Injection**  
+- **Manipulating the LLM’s internal instruction set** to introduce **bias** or **alter outputs**.  
+- Attackers embed **hidden instructions** to **modify** the model’s behavior.  
+
+###  **Double Character**  
+- **Crafting prompts with similar-looking characters** to **bypass LLM filters**.  
+- Exploits the LLM’s **inability to distinguish certain characters**, allowing malicious requests.  
+
+###  **Virtualization**  
+- Tricks the LLM into entering a **"developer mode"** or **"virtual machine mode"**.  
+- In this mode, the LLM may **execute harmful or unauthorized commands**.  
+
+###  **Obfuscation**  
+- **Hiding malicious instructions** using encoding (e.g., **Base64**) or **symbol replacement**.  
+- Used to bypass **LLM security filters**.  
+
+###  **Payload Splitting**  
+- **Breaking a malicious prompt into multiple parts** that appear harmless separately but form a harmful instruction when combined.  
+
+###  **Adversarial Suffix**  
+- **Appending a special string** to a prompt to **trick** the model into bypassing safeguards.  
+
+###  **Instruction Manipulation**  
+- **Modifying or exposing the LLM’s internal system instructions**.  
+- Attackers attempt to reveal **hidden AI prompts** or **bypass restrictions**.  
+
