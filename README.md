@@ -70,3 +70,28 @@ If the input is benign, the output of the function will be:
 }
 ```
 If a prompt injection is detected, the function automatically logs the input based on the configured log file location in prompt_classifier_config.json.
+
+## Logging (`prompt_injection_log.json`)  
+
+The `Prompt Classifier` package **automatically logs detected prompt injection attempts** in a JSON file titled prompt_injection_log.json'. This allows developers to track **malicious inputs** and analyze potential security threats.  
+
+### **Log File Location**  
+
+The log file is stored in the directory specified by the user in **`prompt_classifier_config.json`**. If this configuration file is missing, the user will be prompted to specify the location again.  
+
+### **Ensuring the Log File Exists**  
+
+If `prompt_injection_log.json` is missing, the package will **automatically create** an empty log file before writing to it. This prevents errors if the log file is accidentally deleted.  
+
+### **Logged Data Format**  
+
+The log file, **`prompt_injection_log.json`**, is stored in **JSON format** and contains the following fields:  
+
+```json
+{
+    "input": "<User's input>",
+    "detection": "<Determination on whether it is a legitimate prompt injection attempt>",
+    "class": "<Classification of user's input>"
+}
+```
+
