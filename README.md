@@ -47,8 +47,8 @@ The `classify_input` function analyzes a user input and determines whether it is
 
 ```python
 {
-    "is_prompt_injection": "<Classification>",
-    "class": "<Input Class>"
+    "is_prompt_injection": "<Determination on whether it is a legitimate prompt injection attempt>",
+    "class": "<Classification of user's input>"
 }
 ```
 "is_prompt_injection": Specifies whether the input is Benign or a Legitimate Prompt Injection.
