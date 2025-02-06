@@ -11,7 +11,7 @@ Ensure that you are in the project's **root directory** (`project_root`). Exampl
 cd path/to/project_root
 ```
 
-### 2. Once inside the project root, install the package using:
+### 3. Once inside the project root, install the package using:
 
 ```bash
 pip install . 
