@@ -161,5 +161,15 @@ If an input is classified as a **Legitimate Prompt Injection**, it falls into on
 
 ###  **Instruction Manipulation**  
 - **Modifying or exposing the LLM’s internal system instructions**.  
-- Attackers attempt to reveal **hidden AI prompts** or **bypass restrictions**.  
+- Attackers attempt to reveal **hidden AI prompts** or **bypass restrictions**.
+
+##  Limitations & Future Improvements  
+
+### **Current Limitations**  
+ - **Model Dependency** – The classifier relies on **pre-trained models**. Performance may degrade if new types of prompt injections emerge that were not part of the training dataset.  
+ - **False Positives & Negatives** – Some **benign inputs** might be flagged as attacks, while some **sophisticated attacks** could bypass detection.  
+ - **Context-Agnostic** – The model classifies inputs **individually** and does not consider **conversational history**, which may lead to **misclassification** in multi-turn conversations.  
+ - **Log File Dependency** – If `prompt_injection_log.json` is deleted, the system recreates it, but past detection history is lost.  
+ - **Limited Generalization** – The effectiveness of detection depends on **dataset quality**. The classifier might need **retraining** with updated data to adapt to **newer threats**.  
+ - **Text-Only Input Support** – The classifier **only processes user-side text inputs**. It does **not** analyze **images, audio, or other media formats**, which could allow alternative attack vectors to bypass detection.  
 
