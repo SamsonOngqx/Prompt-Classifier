@@ -41,7 +41,7 @@ If you need to change the log file location, **delete `prompt_classifier_config.
 
 To classify a user input, import the package and use the `classify_input` function in your script:  
 
-For example:
+For example (initialisation.py file):
 ```python
 from prompt_classifier import classify_input
 
