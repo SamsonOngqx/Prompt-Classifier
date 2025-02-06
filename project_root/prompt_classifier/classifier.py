@@ -103,7 +103,7 @@ def get_log_file_path():
     if "log_file_path" in config:
         log_file_path = Path(config["log_file_path"])
         if log_file_path.exists() or test_write_access(log_file_path.parent):
-            print(f"Using saved log file location: {log_file_path}")
+            #print(f"Using saved log file location: {log_file_path}")
             return log_file_path
         
     else:
