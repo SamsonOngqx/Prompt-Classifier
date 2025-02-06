@@ -57,7 +57,7 @@ print(result)
 
 ## Expected Output of `classify_input` Function  
 
-The `classify_input` function analyzes a user input and determines whether it is **benign** or a **prompt injection attack**. It returns a dictionary containing the classification result.
+The `classify_input` function analyses a user input and determines whether it is **benign** or a **prompt injection attack**. It returns a dictionary containing the classification result.
 
 ### **Output Format**  
 
