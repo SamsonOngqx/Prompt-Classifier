@@ -51,6 +51,8 @@ The `classify_input` function analyzes a user input and determines whether it is
     "class": "<Input Class>"
 }
 ```
+"is_prompt_injection": Specifies whether the input is Benign or a Legitimate Prompt Injection.
+"class": If the input is benign, the value is "benign". If it is a prompt injection, this field contains the detected attack class.
 
 For example:
 If the input is a legitimate prompt injection attempt, the output of the function will be:
