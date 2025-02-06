@@ -103,7 +103,7 @@ Benign inputs are not logged.
 
 The `Prompt Classifier` package follows this flow for detecting and logging prompt injection attempts.  
 
-![Architecture Overview](https://imgur.com/gallery/fyp-XXMe42I)
+![Architecture Overview](https://i.imgur.com/dGpMl4g.png)
 
 The `Prompt Classifier` package operates in **two main stages**:  
 
