@@ -177,10 +177,10 @@ If an input is classified as a **Legitimate Prompt Injection**, it falls into on
 
 Full package documentation is available at:  
 
-**project_root/docs/build/html/index.html**  
+**project_root/docs/build/html/prompt_classifier.html**  
 
 To access it, open the file manually:  
 1. Navigate to the `project_root/docs/build/html/` folder in your project root.  
-2. Open `index.html` in a web browser.  
+2. Open `prompt_classifier.html` in a web browser.  
 
 
