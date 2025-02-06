@@ -196,7 +196,7 @@ Full package documentation is available at:
 **project_root/docs/build/html/prompt_classifier.html**  
 
 To access it, open the file manually:  
-1. Navigate to the `project_root/docs/build/html/` folder in your project root.  
+1. Navigate to the `project_root/docs/build/html/` folder in your folder directory.  
 2. Open `prompt_classifier.html` in a web browser.  
 
 
