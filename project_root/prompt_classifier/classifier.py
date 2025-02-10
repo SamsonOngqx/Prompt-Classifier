@@ -89,7 +89,7 @@ def test_write_access(folder_path):
 
 def get_log_file_path():
     """
-    Prompts the user to specify a valid and writable directory for the log file.
+    Opens a file directory dialog to allow the user to select a folder for saving the log file.
 
     Returns:
         pathlib.Path: The path to the log file.
@@ -103,54 +103,26 @@ def get_log_file_path():
     if "log_file_path" in config:
         log_file_path = Path(config["log_file_path"])
         if log_file_path.exists() or test_write_access(log_file_path.parent):
-            #print(f"Using saved log file location: {log_file_path}")
+            print(f"Using saved log file location: {log_file_path}")
             return log_file_path
-        
+    
     else:
-        print("Saved config file is invalid, if it is your first time running the classify_input function ignore this message")
+        print("Saved config file is invalid, please try again")
 
-    desktop_path = Path.home() / "Desktop"
-    print(f"Select a location for your log file. Default: {desktop_path / 'prompt_injection_log.json'}")
+    # Open a file dialog for the user to select a directory
+    root = tk.Tk()
+    root.withdraw()  # Hide the root window
+    selected_folder = filedialog.askdirectory(title="Select a folder to save the log file")
 
-    while True:
-        log_file_input = input("Enter the log file path: ").strip()
-        log_file_path = Path(log_file_input) if log_file_input else desktop_path / "prompt_injection_log.json"
-
-        if not log_file_input:
-            # Default case: desktop
-            log_file_path = desktop_path / "prompt_injection_log.json"
-            break
-
-        if not log_file_path.is_absolute():
-            print("Please provide an absolute path. Relative paths are not allowed.")
-            continue
-
-        if not os.path.isdir(log_file_input):
-            print(f"The directory {log_file_input} does not exist. Please enter a valid directory.")
-            continue
-        
-        if log_file_path.is_dir():
-            log_file_path = log_file_path / "prompt_injection_log.json"
-            break
-
-        try:
-            log_file_path.parent.mkdir(parents=True, exist_ok=True)
-            if test_write_access(log_file_path.parent):
-                #save the details of the user's preferred save location into the config file
-                config["log_file_path"] = str(log_file_path)
-                save_config(config)
-                print(f"Log file initialized at: {log_file_path}")
-                break
-            if not log_file_path.exists():
-                log_file_path.write_text("[]")  # Initialize the log file with an empty JSON array
-                continue
-        except Exception as e:
-            print(f"An error occurred while creating the log file: {e}")   
-   
+    if not selected_folder:
+        print("No folder selected. Using default location on Desktop.")
+        selected_folder = Path.home() / "Desktop"
+    
+    log_file_path = Path(selected_folder) / "prompt_injection_log.json"
+    
     try:
         log_file_path.parent.mkdir(parents=True, exist_ok=True)
         if test_write_access(log_file_path.parent):
-            #save the details of the user's preferred save location into the config file
             config["log_file_path"] = str(log_file_path)
             save_config(config)
         if not log_file_path.exists():
