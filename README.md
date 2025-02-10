@@ -27,7 +27,7 @@ project_root/
 ```
 ## Setup (First-Time Users)  
 
-When you run the `classify_input` function for the first time, you will be prompted to enter a **directory path** where the log file should be saved.  
+When you run the `classify_input` function for the first time, you will be prompted to select a **directory path** or **folder** in a file directory where you would like the log file to be saved.  
 
 Once you provide a valid directory, a configuration file named **`prompt_classifier_config.json`** will be created in the same directory where `classify_input` is executed. This file stores your chosen log file location for future use.  
 
