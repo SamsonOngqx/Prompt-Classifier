@@ -109,7 +109,7 @@ def get_log_file_path():
             return log_file_path
     
     else:
-        print("Saved config file is invalid, please try again")
+        print("Saved config file is invalid, please try again. Ignore this message if it is your first time calling the classify_input function")
 
     # Open a file dialog for the user to select a directory
     root = tk.Tk()
