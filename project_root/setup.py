@@ -1,7 +1,5 @@
 from setuptools import setup, find_packages
 from setuptools.command.install import install
-import os
-import subprocess
 
 setup(
     name='prompt_classifier',
