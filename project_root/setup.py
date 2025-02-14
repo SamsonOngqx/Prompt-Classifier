@@ -7,10 +7,10 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'joblib',
+        'joblib==1.4.2',
         'scikit-learn==1.5.2',
         'imblearn',
-        'xgboost',
+        'xgboost==2.1.3',
     ],
     description='A Python package for chatbot developers to classify prompt injection attempts.',
     author='Samson Ong',
