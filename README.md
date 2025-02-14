@@ -1,5 +1,9 @@
 # Prompt-Classifier
-Prompt  Classifier is a Python package for chatbot developers to detect prompt injection attacks using ML models. It supports TF-IDF vectorization, classification algorithms, and logs potential attacks in a json file. Built with scikit-learn, XGBoost, and joblib, it helps secure chatbot interactions.
+Prompt-Classifier is a Python package designed for chatbot developers to enhance the security of their chatbot interactions by detecting and mitigating prompt injection attacks using machine learning models. The package leverages advanced techniques such as TF-IDF vectorization and classification algorithms to classify user inputs and identify potential malicious prompts.
+
+For more information, the Python package analyses user inputs and determines if they are benign or legitimate prompt injection attempts. It returns the classification results to the developer. If the user input is classified as a legitimate prompt injection attempt, the package logs the details in a structured JSON file, enabling developers to review and analyse potential security threats.
+
+Built with scikit-learn, XGBoost, and joblib, Prompt-Classifier offers a comprehensive and easy-to-use solution for detecting a wide range of prompt injection techniques. It helps chatbot developers—especially those without a strong background in cybersecurity—create secure conversational agents.
 
 ## Installation
 ### 1. Download the project_root folder
@@ -10,21 +14,29 @@ Ensure that you are in the project's **root directory** (`project_root`). Exampl
 ```bash
 cd path/to/project_root
 ```
-
-### 3. Once inside the project root, install the package using:
-
-```bash
-pip install . 
-```
 Example Directory Structure
 Your project should look like this before running the command:
 ```arduino
 project_root/
 │── prompt_classifier/
 │── setup.py
+│── requirements.txt
 │── MANIFEST.in
 │── docs/
 ```
+
+### 3. Installing Dependencies
+Before installing the package, ensure that all dependencies are installed. These are listed in the requirements.txt file. To install them, run the following command in your terminal:
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Once inside the project root and after installing all the dependencies in the requirements.txt file, install the package using:
+
+```bash
+pip install . 
+```
+
 ## Setup (First-Time Users)  
 
 When you run the `classify_input` function for the first time, you will be prompted to select a **directory path** or **folder** in a file directory where you would like the log file to be saved.  
